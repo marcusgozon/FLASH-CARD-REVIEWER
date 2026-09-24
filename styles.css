@@ -106,7 +106,8 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  margin-bottom: 24px;
+  margin-bottom: 48px;
+  margin-top: 16px;
 }
 
 .chapter-btn {
@@ -324,7 +325,7 @@ footer {
 
   .toolbar {
     gap: 6px;
-    margin-bottom: 16px;
+    margin-bottom: 48px;
   }
 
   .card {
