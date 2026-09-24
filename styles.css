@@ -16,6 +16,8 @@
 }
 
 body {
+  display: flex;
+  flex-direction: column;
   min-height: 100vh;
   margin: 0;
   background: var(--bg);
@@ -29,10 +31,15 @@ button {
 }
 
 .app {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
   width: min(640px, calc(100% - 32px));
-  min-height: calc(100vh - 72px);
-  margin: auto;
-  padding: 25px 0 30px;
+  min-height: 0;
+  margin: 0 auto;
+  padding: 24px 0 30px;
+  transform: translateY(clamp(8px, 2vh, 18px));
 }
 
 header {
@@ -289,9 +296,7 @@ h1 {
 }
 
 footer {
-  padding: 18px 0px 18px;
-  margin-bottom:0;
-  background-color:rgb(5, 5, 5);
+  padding: 0px 0px 20px;
   color: #777;
   font-size: 12px;
   text-align: center;
@@ -300,8 +305,8 @@ footer {
 @media (max-width: 520px) {
   .app {
     width: min(640px, calc(100% - 24px));
-    min-height: calc(100vh - 52px);
-    padding: 16px 0 20px;
+    padding: 24px 0 20px;
+    transform: translateY(8px);
   }
 
   header {
