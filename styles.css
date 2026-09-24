@@ -43,7 +43,7 @@ header {
 .eyebrow {
   margin: 0 0 4px;
   color: var(--red);
-  font-size: 12px;
+  font-size: 15px;
   font-weight: 700;
 }
 
@@ -289,7 +289,9 @@ h1 {
 }
 
 footer {
-  padding: 0 16px 18px;
+  padding: 18px 0px 18px;
+  margin-bottom:0;
+  background-color:rgb(5, 5, 5);
   color: #777;
   font-size: 12px;
   text-align: center;
