@@ -386,12 +386,12 @@ footer {
 @media (max-width: 520px) {
   .app {
     width: min(640px, calc(100% - 24px));
-    padding: 24px 0 20px;
-    transform: translateY(8px);
+    padding: 12px 0 10px;
+    transform: none;
   }
 
   header {
-    margin-bottom: 18px;
+    margin-bottom: 10px;
   }
 
   h1 {
@@ -404,7 +404,11 @@ footer {
   }
 
   .tabs {
-    margin-bottom: 16px;
+    margin-bottom: 8px;
+  }
+
+  .term-tabs {
+    margin-bottom: 10px;
   }
 
   .tab {
@@ -413,7 +417,28 @@ footer {
 
   .toolbar {
     gap: 6px;
-    margin-bottom: 48px;
+    margin-top: 8px;
+    margin-bottom: 14px;
+  }
+
+  .card {
+    padding: 14px 12px;
+  }
+
+  .meta {
+    margin-bottom: 6px;
+  }
+
+  .progress {
+    margin-bottom: 12px;
+  }
+
+  .question {
+    max-height: clamp(5rem, 17svh, 8rem);
+    margin-bottom: 12px;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    font-size: 16px;
   }
 
   .card {
@@ -438,8 +463,9 @@ footer {
   }
 
   .option {
-    min-height: 44px;
-    padding: 9px 12px;
+    min-height: 42px;
+    padding: 8px 10px;
+    font-size: 13px;
   }
 
   .feedback {
