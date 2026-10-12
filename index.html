@@ -6,12 +6,9 @@
     <title>Flashcard Reviewer Quiz</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="icon" type="image/png" href="img/favicon.png" />
-    <link rel="stylesheet" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+    <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
     <div class="app">
@@ -21,24 +18,29 @@
         <p class="subtitle">CC03 &amp; WS1 FLASHCARD REVIEWER BY GOZON</p>
       </header>
 
+      <!-- Subject -->
       <div class="tabs" role="tablist" aria-label="Subject">
-        <button class="tab active" data-subject="CC03">CC03</button>
-        <button class="tab" data-subject="WS1">WS1</button>
+        <button class="tab active" role="tab" data-subject="CC03">CC03</button>
+        <button class="tab" role="tab" data-subject="WS1">WS1</button>
       </div>
 
-      <div class="toolbar">
-        <button class="chapter-btn active" data-chapter="all">All chapters</button>
-        <button class="chapter-btn" data-chapter="1">Chapter 1</button>
-        <button class="chapter-btn" data-chapter="2">Chapter 2</button>
-        <button class="chapter-btn" data-chapter="3">Chapter 3</button>
-        <button class="chapter-btn" data-chapter="4">Chapter 4</button>
-        <button class="chapter-btn" data-chapter="5">Chapter 5</button>
+      <!-- Term -->
+      <div class="tabs term-tabs" role="tablist" aria-label="Term">
+        <button class="tab active" role="tab" data-term="PRELIMS">Prelims</button>
+        <button class="tab" role="tab" data-term="MIDTERMS">Midterms</button>
+        <button class="tab" role="tab" data-term="FINALS">Finals</button>
       </div>
+
+      <!-- Chapter buttons are generated from js/config.js -->
+      <div class="toolbar" id="toolbar"></div>
 
       <div id="appContent"></div>
     </div>
     <footer>&copy; 2026 Gozon Flashcard Reviewer (WS1 &amp; CC03)</footer>
 
-    <script src="script.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/data/cc03.js"></script>
+    <script src="js/data/ws1.js"></script>
+    <script src="js/app.js"></script>
   </body>
 </html>

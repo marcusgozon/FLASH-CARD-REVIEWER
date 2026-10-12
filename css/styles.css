@@ -15,6 +15,10 @@
   box-sizing: border-box;
 }
 
+[hidden] {
+  display: none !important;
+}
+
 body {
   display: flex;
   flex-direction: column;
@@ -70,9 +74,10 @@ h1 {
 
 .tabs {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
   gap: 4px;
-  margin-bottom: 24px;
+  margin-bottom: 14px;
   padding: 4px;
   border: 1px solid var(--border);
   border-radius: 28px;
@@ -109,12 +114,83 @@ h1 {
   filter: brightness(1.15);
 }
 
+.term-tabs {
+  position: relative;
+  gap: 12px;
+  margin-bottom: 18px;
+  padding: 0 4px;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  counter-reset: term-step;
+}
+
+.term-tabs::before {
+  position: absolute;
+  top: 14px;
+  right: 16%;
+  left: 16%;
+  height: 1px;
+  background: #3a3a3a;
+  content: "";
+}
+
+.term-tabs .tab {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 0 4px 8px;
+  border-bottom: 2px solid transparent;
+  border-radius: 0;
+  color: #888;
+  font-size: 12px;
+  counter-increment: term-step;
+}
+
+.term-tabs .tab::before {
+  display: grid;
+  width: 28px;
+  height: 28px;
+  place-items: center;
+  border: 1px solid #484848;
+  border-radius: 50%;
+  background: #171717;
+  color: #aaa;
+  content: counter(term-step, decimal-leading-zero);
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.term-tabs .tab.active {
+  border-bottom-color: var(--red);
+  background: transparent;
+  color: var(--text);
+}
+
+.term-tabs .tab.active::before {
+  border-color: var(--red);
+  background: var(--red);
+  color: #fff;
+}
+
+.term-tabs .tab:hover {
+  filter: none;
+  color: var(--text);
+}
+
+.term-tabs .tab:hover::before {
+  border-color: var(--red);
+}
+
 .toolbar {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
   margin-bottom: 48px;
-  margin-top: 16px;
+  margin-top: 24px;
 }
 
 .chapter-btn {
@@ -176,6 +252,7 @@ h1 {
 }
 
 .question {
+  white-space: pre-line;
   margin-bottom: 22px;
   font-size: 20px;
   font-weight: 600;
@@ -242,6 +319,10 @@ h1 {
 .controls {
   display: flex;
   margin-top: 16px;
+}
+
+.result .controls {
+  justify-content: center;
 }
 
 .next-btn {
