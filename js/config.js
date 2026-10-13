@@ -2,7 +2,7 @@
    When Finals content is ready, list its chapter numbers here (e.g. chapters: [9, 10]) and add the questions to js/data/. */
 const TERMS = {
   PRELIMS:  { label: "Prelims",  chapters: [1, 2, 3, 4, 5] },
-  MIDTERMS: { label: "Midterms", chapters: [6, 7, 8] },
+  MIDTERMS: { label: "Midterms", chapters: [6, 7, 8, 9] },
   FINALS:   { label: "Finals",   chapters: [] },
 };
 
